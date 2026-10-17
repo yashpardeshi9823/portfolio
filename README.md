@@ -1,6 +1,6 @@
 # Cinematic Portfolio
 
-A dark, cinematic developer portfolio with a spotlight hero, gold display type and smooth scroll animations.
+A dark, cinematic personal portfolio with a spotlight hero, gold display type and smooth scroll animations.
 
 Built with **React**, **Vite**, **Tailwind CSS** and **Framer Motion**.
 
@@ -15,9 +15,9 @@ Then open http://localhost:5173.
 
 ## Make it yours
 
-Everything personal lives in [`src/data.js`](src/data.js): your name, roles, intro, projects, skills, experience and social links.
+Everything personal lives in [`src/data.js`](src/data.js): your name, roles, intro, featured work, skills, experience, education and links.
 
-- **Photo:** put a transparent-background PNG of yourself (a full-body shot works best) in `public/` and set `photo: '/profile.png'`. You can remove the background with remove.bg or Canva.
+- **Photo:** put a transparent-background PNG of yourself (a full-body shot works best) in `public/` and set `photo` to its path. You can remove the background with remove.bg or Canva.
 - **Resume:** add `public/resume.pdf`.
 
 ## Deploy

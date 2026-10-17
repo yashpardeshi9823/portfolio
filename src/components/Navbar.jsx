@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { profile } from '../data'
 
-const links = ['About', 'Projects', 'Skills', 'Experience', 'Contact']
+const links = ['About', 'Work', 'Skills', 'Experience', 'Education', 'Contact']
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)

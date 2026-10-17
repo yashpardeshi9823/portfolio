@@ -2,75 +2,107 @@
 export const profile = {
   name: 'Yash Pardeshi',
   brand: 'YASH.',
-  photo: '/profile.svg', // replace with a transparent-background PNG, e.g. '/profile.png'
-  roles: ['Full Stack Developer', 'UI/UX Designer', 'Data Science'],
-  headline: ['I Build', 'Digital', 'Experiences'],
+  photo: '/yash.webp',
+  roles: ['Finance & Treasury', 'Financial Modeling', 'Market Research'],
+  headline: ['Numbers', 'That Drive', 'Decisions'],
   intro:
-    'I turn bold ideas into seamless digital experiences. Where frontend meets powerful backend, and code transforms vision into impact.',
-  quote: ['Code is my craft.', 'Impact is my goal.'],
+    'MBA Finance student turning cash flows, assumptions and market data into clear analysis that leadership can act on.',
+  quote: ['Precision is my craft.', 'Value is my goal.'],
   resume: '/resume.pdf',
-  email: 'you@example.com',
-  location: 'India',
+  email: 'yashpardeshi9823@gmail.com',
   socials: {
-    github: 'https://github.com/yashpardeshi9823',
-    linkedin: 'https://linkedin.com/in/yashpardeshi9823',
-    instagram: 'https://instagram.com/yashpardeshi9823',
+    linkedin: 'https://www.linkedin.com/in/yash-pardeshi-a42ba0344',
   },
 }
 
 export const about = {
   text: [
-    "I'm a developer who cares about the details: smooth motion, clean architecture and interfaces that feel effortless.",
-    'I enjoy taking products from a rough idea to a polished, production-ready experience across the whole stack.',
+    'I am an MBA Finance student at Universal AI University, Mumbai, with hands-on Finance & Treasury experience in project finance and financial modeling.',
+    'At AdaniConnex I built an integrated model for hyperscale data center infrastructure, evaluating cash flows, capital and operating costs, financing assumptions and investment returns using NPV, WACC, PIRR, EIRR, EBITDA and terminal value.',
+    'Before my MBA I spent over two years in data analysis and quality review, which taught me the analytical discipline and attention to detail I bring to every model.',
   ],
   stats: [
-    { value: '15+', label: 'Projects shipped' },
-    { value: '3+', label: 'Years coding' },
-    { value: '10+', label: 'Technologies' },
+    { value: '2+', label: 'Years professional experience' },
+    { value: '99%', label: 'Data accuracy at scale' },
+    { value: 'CFO', label: 'Letter of recommendation' },
   ],
 }
 
 export const projects = [
   {
-    title: 'Cinematic Portfolio',
-    description: 'A motion-rich personal site built with React, Tailwind CSS and Framer Motion.',
-    tags: ['React', 'Tailwind', 'Framer Motion'],
-    live: '#',
-    code: '#',
+    title: 'Hyperscale Data Center Project Finance Model',
+    org: 'AdaniConnex Private Limited',
+    period: 'May 2026 - Jul 2026',
+    description:
+      'Integrated project finance model linking revenue assumptions, CAPEX, OPEX, financing, taxation and projected cash flows to evaluate project returns. Findings were presented to senior management and earned a Letter of Recommendation from the CFO.',
+    tags: ['NPV', 'WACC', 'PIRR / EIRR', 'EBITDA', 'Terminal value'],
   },
   {
-    title: 'Realtime Chat App',
-    description: 'Socket-powered messaging with rooms, presence and message history.',
-    tags: ['Node.js', 'Socket.io', 'MongoDB'],
-    live: '#',
-    code: '#',
-  },
-  {
-    title: 'Analytics Dashboard',
-    description: 'Interactive dashboard that turns raw data into clear, actionable insights.',
-    tags: ['Python', 'Pandas', 'Chart.js'],
-    live: '#',
-    code: '#',
+    title: 'Retail Penetration Study, Haryana',
+    org: 'Apar Industries Ltd. · Corporate Live Project (CMAPS)',
+    period: 'Dec 2025 - Jan 2026',
+    description:
+      'Analyzed market and business data to assess retail penetration across Haryana. Ran competitive and channel-level analysis of demand, distribution gaps and market trends, and turned the findings into structured recommendations.',
+    tags: ['Market research', 'Competitor analysis', 'Channel analysis'],
   },
 ]
 
 export const skills = [
-  { group: 'Frontend', items: ['React', 'JavaScript', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'HTML & CSS'] },
-  { group: 'Backend', items: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'REST APIs'] },
-  { group: 'Data & Tools', items: ['Python', 'Pandas', 'Git & GitHub', 'Figma', 'Docker'] },
+  {
+    group: 'Modeling & Valuation',
+    items: ['Integrated financial modeling', 'DCF & terminal value', 'NPV & WACC', 'PIRR / EIRR', 'EBITDA analysis', 'Investment appraisal'],
+  },
+  {
+    group: 'Research & Analysis',
+    items: ['Industry & competitor research', 'Market analysis', 'Financial statement analysis', 'Revenue, CAPEX & OPEX', 'Sensitivity analysis'],
+  },
+  {
+    group: 'Reporting & Tools',
+    items: ['MS Excel', 'PowerPoint', 'Word', 'Data validation & QC', 'Documentation', 'Business communication'],
+  },
 ]
 
 export const experience = [
   {
-    role: 'Full Stack Developer Intern',
-    company: 'Company Name',
-    period: '2025 - Present',
-    points: ['Built and shipped features used by thousands of users.', 'Improved page load performance by 40%.'],
+    role: 'Finance & Treasury Intern',
+    company: 'AdaniConnex Private Limited',
+    period: 'May 2026 - Jul 2026',
+    points: [
+      'Developed an integrated project finance model for hyperscale data center infrastructure.',
+      'Applied NPV, WACC, terminal value, PIRR, EIRR and EBITDA metrics to evaluate project returns.',
+      'Reviewed operating and financing assumptions and their effect on cash flows and project performance.',
+      'Presented structured financial analysis to senior management.',
+    ],
   },
   {
-    role: 'Freelance Web Developer',
-    company: 'Self-employed',
-    period: '2023 - 2025',
-    points: ['Designed and developed websites for small businesses.', 'Handled everything from design to deployment.'],
+    role: 'Editor Analyst',
+    company: 'Real Team Systems Pvt. Ltd.',
+    period: 'Mar 2023 - Jun 2025',
+    points: [
+      'Processed and reviewed structured and unstructured business data with 99% accuracy on tight deadlines.',
+      'Performed data validation, quality-control reviews and discrepancy checks to keep reporting accurate.',
+      'Prepared clear documentation while handling confidential information.',
+    ],
   },
 ]
+
+export const education = [
+  { degree: 'MBA, Finance', school: 'Universal AI University, Mumbai', period: '2025 - 2027' },
+  { degree: 'Global Management Program', school: 'University of Economics Varna, Bulgaria', period: 'International exposure' },
+  { degree: 'B.Com', school: 'Deogiri College, Chh. Sambhajinagar', period: '2021 - 2024' },
+]
+
+export const credentials = {
+  certifications: [
+    'Discounted Cash Flow (DCF) and Other Valuation Methodologies, New York Institute of Finance',
+    'AI in Excel, Office Master',
+    'AI Fluency, Microsoft',
+    'MS-CIT',
+    'Financial Analysis and Financial Modeling (in progress)',
+  ],
+  leadership: [
+    'Vice President, Skill Development Community, Universal AI University',
+    'Head, Rush 4 Rush annual fest',
+    'Operations Head, Experiential Learning Corporation (ELC)',
+  ],
+}

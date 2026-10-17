@@ -80,7 +80,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 1.5 }}
             className="mt-10 flex flex-wrap gap-4"
           >
-            <a href="#projects" className="btn-gold">
+            <a href="#work" className="btn-gold">
               Explore my work <ArrowUpRight size={14} />
             </a>
             <a href={profile.resume} download className="btn-ghost">

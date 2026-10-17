@@ -14,11 +14,11 @@ export default function About() {
             <p key={p}>{p}</p>
           ))}
         </Reveal>
-        <div className="grid grid-cols-3 gap-4 self-start">
+        <div className="grid grid-cols-3 gap-3 self-start sm:gap-4">
           {about.stats.map((s, i) => (
-            <Reveal key={s.label} delay={0.15 + i * 0.1} className="border border-white/10 p-5">
+            <Reveal key={s.label} delay={0.15 + i * 0.1} className="min-w-0 border border-white/10 p-4 sm:p-5">
               <p className="font-display text-4xl text-gold-gradient">{s.value}</p>
-              <p className="mt-2 text-[10px] uppercase tracking-[0.25em] text-slate-500">{s.label}</p>
+              <p className="mt-2 text-[10px] uppercase tracking-[0.12em] text-slate-500 sm:tracking-[0.25em]">{s.label}</p>
             </Reveal>
           ))}
         </div>
