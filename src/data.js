@@ -1,7 +1,7 @@
 // Edit everything about you in this one file.
 export const profile = {
-  name: 'Your Name',
-  brand: 'YOURNAME.',
+  name: 'Yash Pardeshi',
+  brand: 'YASH.',
   photo: '/profile.svg', // replace with a transparent-background PNG, e.g. '/profile.png'
   roles: ['Full Stack Developer', 'UI/UX Designer', 'Data Science'],
   headline: ['I Build', 'Digital', 'Experiences'],
@@ -12,9 +12,9 @@ export const profile = {
   email: 'you@example.com',
   location: 'India',
   socials: {
-    github: 'https://github.com/your-username',
-    linkedin: 'https://linkedin.com/in/your-username',
-    instagram: 'https://instagram.com/your-username',
+    github: 'https://github.com/yashpardeshi9823',
+    linkedin: 'https://linkedin.com/in/yashpardeshi9823',
+    instagram: 'https://instagram.com/yashpardeshi9823',
   },
 }
 
