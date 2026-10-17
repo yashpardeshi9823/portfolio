@@ -10,12 +10,14 @@ export const profile = {
   quote: ['Precision is my craft.', 'Value is my goal.'],
   resume: '/resume.pdf',
   email: 'yashpardeshi9823@gmail.com',
+  phone: '+91 98232 94222',
   socials: {
     linkedin: 'https://www.linkedin.com/in/yash-pardeshi-a42ba0344',
   },
 }
 
 export const about = {
+  heading: ["I don't just crunch numbers.", 'I model what comes next.'],
   text: [
     'I am an MBA Finance student at Universal AI University, Mumbai, with hands-on Finance & Treasury experience in project finance and financial modeling.',
     'At AdaniConnex I built an integrated model for hyperscale data center infrastructure, evaluating cash flows, capital and operating costs, financing assumptions and investment returns using NPV, WACC, PIRR, EIRR, EBITDA and terminal value.',
@@ -30,20 +32,34 @@ export const about = {
 
 export const projects = [
   {
+    category: 'Project finance / Infrastructure',
     title: 'Hyperscale Data Center Project Finance Model',
     org: 'AdaniConnex Private Limited',
     period: 'May 2026 - Jul 2026',
     description:
       'Integrated project finance model linking revenue assumptions, CAPEX, OPEX, financing, taxation and projected cash flows to evaluate project returns. Findings were presented to senior management and earned a Letter of Recommendation from the CFO.',
     tags: ['NPV', 'WACC', 'PIRR / EIRR', 'EBITDA', 'Terminal value'],
+    metrics: [
+      ['Sector', 'Data center infrastructure'],
+      ['Model', 'Integrated project finance'],
+      ['Inputs', 'Revenue, CAPEX, OPEX, financing, tax'],
+      ['Outcome', 'CFO letter of recommendation'],
+    ],
   },
   {
+    category: 'Market research / Corporate live project',
     title: 'Retail Penetration Study, Haryana',
     org: 'Apar Industries Ltd. · Corporate Live Project (CMAPS)',
     period: 'Dec 2025 - Jan 2026',
     description:
       'Analyzed market and business data to assess retail penetration across Haryana. Ran competitive and channel-level analysis of demand, distribution gaps and market trends, and turned the findings into structured recommendations.',
     tags: ['Market research', 'Competitor analysis', 'Channel analysis'],
+    metrics: [
+      ['Client', 'Apar Industries Ltd.'],
+      ['Region', 'Haryana'],
+      ['Method', 'Competitive & channel-level analysis'],
+      ['Output', 'Structured recommendations'],
+    ],
   },
 ]
 
@@ -87,9 +103,11 @@ export const experience = [
 ]
 
 export const education = [
-  { degree: 'MBA, Finance', school: 'Universal AI University, Mumbai', period: '2025 - 2027' },
-  { degree: 'Global Management Program', school: 'University of Economics Varna, Bulgaria', period: 'International exposure' },
-  { degree: 'B.Com', school: 'Deogiri College, Chh. Sambhajinagar', period: '2021 - 2024' },
+  { degree: 'MBA, Finance', school: 'Universal AI University, Mumbai', period: '2025 - 2027', score: 'Ongoing' },
+  { degree: 'Global Management Program', school: 'University of Economics Varna, Bulgaria', period: 'International exposure', score: 'Completed' },
+  { degree: 'B.Com', school: 'Deogiri College, Chh. Sambhajinagar', period: '2021 - 2024', score: 'CGPA 6.8' },
+  { degree: 'Class XII', school: 'Higher Secondary', period: 'Board examination', score: '90.83%' },
+  { degree: 'Class X', school: 'Secondary', period: 'Board examination', score: '73.20%' },
 ]
 
 export const credentials = {

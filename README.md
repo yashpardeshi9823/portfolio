@@ -1,6 +1,6 @@
 # Cinematic Portfolio
 
-A dark, cinematic personal portfolio with a spotlight hero, gold display type and smooth scroll animations.
+A dark, cinematic personal portfolio with a spotlight hero, gold display type and 3D scroll effects: sections that tilt into view, stacked 3D project cards, cursor-tilt cards and a spinning gold coin.
 
 Built with **React**, **Vite**, **Tailwind CSS** and **Framer Motion**.
 
