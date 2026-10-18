@@ -34,6 +34,25 @@ export default function Hero() {
       style={{ perspective: 1600 }}
       className="grain relative flex min-h-screen items-center overflow-hidden bg-gradient-to-b from-night via-[#0b1328] to-ink"
     >
+      {profile.video && (
+        <div className="pointer-events-none absolute inset-0">
+          <motion.video
+            src={profile.video}
+            poster={profile.videoPoster}
+            autoPlay
+            muted
+            loop
+            playsInline
+            initial={{ opacity: 0, scale: 1.06 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 2, ease }}
+            className="h-full w-full object-cover object-[72%_center]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-transparent lg:via-ink/30" />
+          <div className="absolute inset-0 bg-ink/60 lg:hidden" />
+        </div>
+      )}
+
       {/* Stage glow, spotlight beam and smoke */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -right-40 -top-40 h-[700px] w-[700px] rounded-full bg-gold-300/10 blur-[140px]" />
@@ -115,14 +134,16 @@ export default function Hero() {
         </motion.div>
 
         <motion.div style={{ x: photoX, translateZ: 20 }} className="relative flex h-[60vh] items-end justify-center lg:h-[85vh]">
-          <motion.img
-            src={profile.photo}
-            alt={profile.name}
-            initial={{ opacity: 0, scale: 1.08, filter: 'brightness(0.2)' }}
-            animate={{ opacity: 1, scale: 1, filter: 'brightness(1)' }}
-            transition={{ duration: 2, delay: 0.6, ease }}
-            className="relative z-10 h-full w-auto object-contain object-bottom drop-shadow-[0_0_60px_rgba(241,212,138,0.18)]"
-          />
+          {!profile.video && (
+            <motion.img
+              src={profile.photo}
+              alt={profile.name}
+              initial={{ opacity: 0, scale: 1.08, filter: 'brightness(0.2)' }}
+              animate={{ opacity: 1, scale: 1, filter: 'brightness(1)' }}
+              transition={{ duration: 2, delay: 0.6, ease }}
+              className="relative z-10 h-full w-auto object-contain object-bottom drop-shadow-[0_0_60px_rgba(241,212,138,0.18)]"
+            />
+          )}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}

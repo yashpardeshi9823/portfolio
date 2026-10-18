@@ -3,6 +3,9 @@ export const profile = {
   name: 'Yash Pardeshi',
   brand: 'YASH.',
   photo: '/yash.webp',
+  // Walking hero video (e.g. '/yash-walk.mp4' in public/). Leave empty to show the photo instead.
+  video: '',
+  videoPoster: '/yash-stage.jpg',
   roles: ['Finance & Treasury', 'Financial Modeling', 'Market Research'],
   headline: ['Numbers', 'That Drive', 'Decisions'],
   intro:
