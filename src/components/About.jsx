@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+import CountUp from './CountUp'
 import Reveal from './Reveal'
 import Section3D from './Section3D'
 import Tilt from './Tilt'
@@ -9,13 +11,31 @@ export default function About() {
       <p className="eyebrow">01 / About</p>
       <div className="mt-8 grid items-center gap-14 lg:grid-cols-[1.4fr_1fr]">
         <div>
-          <h2 className="font-display text-5xl uppercase leading-[0.95] text-gold-gradient md:text-7xl">
-            {about.heading.map((line) => (
-              <span key={line} className="block">
-                {line}
+          <motion.h2
+            className="font-display text-6xl uppercase leading-[0.9] md:text-8xl"
+            initial="hidden"
+            whileInView="shown"
+            viewport={{ once: true, margin: '-80px' }}
+          >
+            {about.heading.map((line, li) => (
+              <span key={line} className="block overflow-hidden pb-1">
+                <motion.span
+                  className={`block ${li === 0 ? 'text-white' : 'shimmer'}`}
+                  variants={{ hidden: { y: '110%', rotateX: -60 }, shown: { y: 0, rotateX: 0 } }}
+                  transition={{ duration: 1, delay: li * 0.2, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  {line}
+                </motion.span>
               </span>
             ))}
-          </h2>
+          </motion.h2>
+          <motion.div
+            className="mt-6 h-px w-40 origin-left bg-gradient-to-r from-gold-400 to-transparent"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2, delay: 0.5 }}
+          />
           <Reveal delay={0.1} className="mt-8 space-y-5 leading-relaxed text-slate-400">
             {about.text.map((p) => (
               <p key={p}>{p}</p>
@@ -24,7 +44,9 @@ export default function About() {
           <div className="mt-10 grid grid-cols-3 gap-3 border-t border-white/10 pt-8 sm:gap-4">
             {about.stats.map((s, i) => (
               <Reveal key={s.label} delay={0.15 + i * 0.1} className="min-w-0">
-                <p className="font-display text-4xl text-gold-gradient md:text-5xl">{s.value}</p>
+                <p className="font-display text-4xl text-gold-gradient md:text-5xl">
+                  <CountUp value={s.value} />
+                </p>
                 <p className="mt-2 text-[10px] uppercase tracking-[0.12em] text-slate-500 sm:tracking-[0.25em]">{s.label}</p>
               </Reveal>
             ))}

@@ -1,4 +1,5 @@
 import { Award, GraduationCap, Users } from 'lucide-react'
+import CountUp from './CountUp'
 import Reveal from './Reveal'
 import Section3D from './Section3D'
 import Tilt from './Tilt'
@@ -18,7 +19,9 @@ export default function Education() {
                 <h3 className="mt-4 text-lg font-semibold text-white">{e.degree}</h3>
                 <p className="mt-1 text-sm text-slate-400">{e.school}</p>
                 <p className="mt-3 text-[11px] uppercase tracking-[0.25em] text-slate-500">{e.period}</p>
-                <p className="mt-auto pt-5 font-display text-3xl text-gold-gradient">{e.score}</p>
+                <p className="mt-auto pt-5 font-display text-3xl text-gold-gradient">
+                  <CountUp value={e.score} />
+                </p>
               </div>
             </Tilt>
           </Reveal>

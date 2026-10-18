@@ -20,7 +20,7 @@ export const profile = {
 }
 
 export const about = {
-  heading: ["I don't just crunch numbers.", 'I model what comes next.'],
+  heading: ['Pressure', 'Is Privilege.'],
   text: [
     'I am an MBA Finance student at Universal AI University, Mumbai, with hands-on Finance & Treasury experience in project finance and financial modeling.',
     'At AdaniConnex I built an integrated model for hyperscale data center infrastructure, evaluating cash flows, capital and operating costs, financing assumptions and investment returns using NPV, WACC, PIRR, EIRR, EBITDA and terminal value.',

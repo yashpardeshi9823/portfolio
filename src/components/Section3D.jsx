@@ -1,5 +1,6 @@
-import { useRef } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { useEffect, useRef } from 'react'
+import { motion, useInView, useScroll, useTransform } from 'framer-motion'
+import { play } from '../sound'
 
 // Section that starts tilted back like a screen and flattens as it scrolls into view.
 export default function Section3D({ id, children, className = '' }) {
@@ -8,6 +9,10 @@ export default function Section3D({ id, children, className = '' }) {
   const rotateX = useTransform(scrollYProgress, [0, 1], [24, 0])
   const scale = useTransform(scrollYProgress, [0, 1], [0.88, 1])
   const opacity = useTransform(scrollYProgress, [0, 0.6], [0, 1])
+  const inView = useInView(ref, { once: true, margin: '-35% 0px' })
+  useEffect(() => {
+    if (inView) play('swoosh', 0.25)
+  }, [inView])
 
   return (
     <section id={id} ref={ref} style={{ perspective: 1400 }} className={className}>

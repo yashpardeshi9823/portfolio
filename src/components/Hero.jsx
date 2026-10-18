@@ -1,7 +1,11 @@
+import { useEffect } from 'react'
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import { ArrowUpRight, Download } from 'lucide-react'
 import Coin from './Coin'
 import WalkIn from './WalkIn'
+import Magnetic from './Magnetic'
+import Particles from './Particles'
+import { play } from '../sound'
 import { profile } from '../data'
 
 const ease = [0.22, 1, 0.36, 1]
@@ -21,6 +25,11 @@ export default function Hero() {
   const rotateX = useTransform(sy, [-0.5, 0.5], [-4, 4])
   const photoX = useTransform(sx, (v) => v * 25)
   const textX = useTransform(sx, (v) => v * -12)
+
+  useEffect(() => {
+    const t = setTimeout(() => play('footsteps', 0.55), profile.video ? 0 : 450)
+    return () => clearTimeout(t)
+  }, [])
 
   const onMove = (e) => {
     const r = e.currentTarget.getBoundingClientRect()
@@ -72,6 +81,7 @@ export default function Hero() {
             transition={{ duration: s.dur, delay: s.delay, repeat: Infinity, ease: 'easeInOut' }}
           />
         ))}
+        <Particles />
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-ink to-transparent" />
         <div className="absolute bottom-[6%] right-[20%] h-12 w-96 rounded-[50%] bg-gold-200/15 blur-2xl" />
       </div>
@@ -125,12 +135,16 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 1.5 }}
             className="mt-10 flex flex-wrap gap-4"
           >
-            <a href="#work" className="btn-gold">
-              Explore my work <ArrowUpRight size={14} />
-            </a>
-            <a href={profile.resume} download className="btn-ghost">
-              Download resume <Download size={14} />
-            </a>
+            <Magnetic>
+              <a href="#work" className="btn-gold">
+                Explore my work <ArrowUpRight size={14} />
+              </a>
+            </Magnetic>
+            <Magnetic>
+              <a href={profile.resume} download className="btn-ghost">
+                Download resume <Download size={14} />
+              </a>
+            </Magnetic>
           </motion.div>
         </motion.div>
 
@@ -153,7 +167,9 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 2 }}
-            className="absolute bottom-[12%] right-0 z-20 hidden lg:block"
+            className="pointer-events-auto absolute bottom-[12%] right-0 z-20 hidden lg:block"
+            onMouseEnter={() => play('coin', 0.5)}
+            whileHover={{ scale: 1.15, rotate: 8 }}
           >
             <Coin />
           </motion.div>

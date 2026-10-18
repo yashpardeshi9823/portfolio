@@ -35,3 +35,21 @@ body { @apply overflow-x-hidden bg-ink text-slate-200 font-sans antialiased; }
 @media (prefers-reduced-motion: reduce) {
   .coin { animation: none; }
 }
+
+.custom-cursor, .custom-cursor * { cursor: none !important; }
+
+.shimmer {
+  background: linear-gradient(110deg, #c99a3e 0%, #f1d48a 30%, #fff6dc 45%, #f1d48a 60%, #c99a3e 100%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 5s ease-in-out infinite;
+}
+@keyframes shimmer {
+  0%, 100% { background-position: 100% 0; }
+  50% { background-position: 0% 0; }
+}
+
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
